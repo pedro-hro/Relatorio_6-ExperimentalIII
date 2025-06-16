@@ -69,19 +69,19 @@
 
 \section{Dados Experimentais}
 \paragraph{}
-Os dados de tensão ($V$) em função do tempo ($t$) foram adquiridos com o auxílio de um osciloscópio. Para garantir a reprodutibilidade e avaliar a consistência dos resultados, registramos X medições para cada um dos três cenários experimentais definidos: com a bobina geradora e o ímã, com a bobina geradora e a bobina detectora, sem o núcleo de ferro e por último com a bobina geradora e a bobina detectora, com a inserção do núcleo de ferro.
+Os dados de tensão ($V$) em função do tempo ($t$) foram adquiridos com o auxílio de um osciloscópio. Para garantir a reprodutibilidade e avaliar a consistência dos resultados, registramos pelo menos 10 medições para cada um dos três cenários experimentais definidos: com a bobina geradora e o ímã, com a bobina geradora e a bobina detectora, sem o núcleo de ferro na geradora e por último com a bobina geradora e a bobina detectora, com a inserção do núcleo de ferro na geradora.
 
-A seguir, apresentamos um gráfico representativo de cada cenário. Para facilitar a visualização do evento de indução, os gráficos foram plotados no intervalo de tempo específico onde o pulso de tensão ocorre. A análise quantitativa subsequente focará na determinação do fluxo a partir da integral da curva V(t). O conjunto completo de dados brutos para todas as Y medições pode ser consultado no Apêndice.
+A seguir, apresentamos um gráfico representativo de cada cenário. Para facilitar a visualização do evento de indução, os gráficos foram plotados no intervalo de tempo específico onde o pulso de tensão ocorre. A análise quantitativa subsequente focará na determinação do fluxo a partir da integral da curva V(t). O conjunto completo de dados brutos para todas as medições pode ser consultado no Apêndice.
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.8\textwidth]{figuras/grafico_diferenca_potencial - 1.png}
+    \includegraphics[width=0.75\textwidth]{figuras/grafico_diferenca_potencial - 1.png}
     \caption{Gráfico de tensão versus tempo com a bobina geradora e o imã.}
     \label{fig:grafico1}
 \end{figure}
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.8\textwidth]{figuras/grafico_diferenca_potencial - 2.png}
+    \includegraphics[width=0.75\textwidth]{figuras/grafico_diferenca_potencial - 2.png}
     \caption{Gráfico de tensão versus tempo com a bobina geradora e o detector sem o núcleo de ferro.}
     \label{fig:grafico2}
 \end{figure}
@@ -95,8 +95,31 @@ A seguir, apresentamos um gráfico representativo de cada cenário. Para facilit
 
 
 \section{Análise de Dados}
-De posse dos dados experimentais, utilizamos a integração numérica com o método do trapézio para calcular o fluxo magnético $\Phi$ através da bobina detectora. A partir da equação (14) desenvolvida na seção de embasamento teórico, podemos expressar o fluxo magnético experimental como o resultado da integral da curva de tensão em função do tempo dividida pelo número de voltas $N$ da bobina detectora. 
-O resultado esperado é que o valor dessa integral seja constante entre as medições 
+\paragraph{}
+De posse dos dados experimentais, utilizamos a integração numérica pelo método do trapézio para analisar a relação entre a tensão induzida e o fluxo magnético. Conforme a Lei de Faraday, mais especificamente utilizando a relação expressa na equação (14), a integral da tensão em função do tempo está diretamente ligada à variação total do fluxo magnético através da bobina detectora. O resultado esperado é que o valor desta integral, $\int V(t)dt$, seja constante para todas as medições realizadas sob o mesmo cenário experimental. A justificativa para essa constância é que a variação total do fluxo magnético depende apenas das configurações inicial e final do sistema, que são as mesmas em cada repetição do experimento. As pequenas flutuações observadas entre os valores medidos são atribuídas às incertezas experimentais do procedimento.\\
+
+Os resultados obtidos para o fluxo magnético e campo magnético são apresentados na tabela a seguir. A tabela inclui os valores médios e os desvios padrão, calculados a partir das medições realizadas.
+\begin{table}[H]
+    \centering
+    \begin{tabular}{|c|c|c|c|}
+        \hline
+        Gerador do Campo $B$ & Fluxo Magnético ($\Phi$) & Desvio Padrão ($\sigma$)& Campo Magnético ($B$) \\
+        \hline
+        Ímã & $9,58.10^{-5}$ Wb &  $3,89.10^{-7}$ & $3,83.10^{-2}$ T \\
+        Bobina geradora & $2,71.10^{-8}$ Wb & $9,34.10^{-10}$ & $1,08.10^{-5}$ T \\
+        Eletroimã & $5,60.10^{-7}$ Wb & $1,65.10^{-8}$ & $2,24.10^{-4}$ T \\
+        \hline
+    \end{tabular}
+    \caption{Resultados dos fluxos magnéticos e campos magnéticos para os diferentes cenários experimentais.}
+    \label{tab:resultados_fluxo_campo}
+\end{table}
+
+Usando os valores encontrados, e a propagação de incertezas, obtemos um valor para a constante de permeabilidade magnética do material do núcleo de ferro, $\mu$, que é calculada pela relação $\mu = \frac{B_{Nucleo}}{B_{Sem Nucleo}} . \mu_0$, igual a:
+\begin{equation}
+    2,60.10^{-5} \pm 4.71.10^{-7} \frac{T.m}{A}. 
+\end{equation}
+Esse valor é plausível, pois está na ordem de grandeza esperada para materiais compostos de ferro com impurezas.
+
 \section{Conclusão}
 [...]
 
@@ -115,8 +138,7 @@ Schechner, S. J. (2015). The Art of Making Leyden Jars and Batteries according t
 
 \end{thebibliography}
 
-\section*{Apêndice}
-\paragraph{}
+%\section*{Apêndice - Gráficos de DDP vs Tempo}
 \include{graficos}
 
 \end{document}
