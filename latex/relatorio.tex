@@ -69,10 +69,34 @@
 
 \section{Dados Experimentais}
 \paragraph{}
-[...]
+Os dados de tensão ($V$) em função do tempo ($t$) foram adquiridos com o auxílio de um osciloscópio. Para garantir a reprodutibilidade e avaliar a consistência dos resultados, registramos X medições para cada um dos três cenários experimentais definidos: com a bobina geradora e o ímã, com a bobina geradora e a bobina detectora, sem o núcleo de ferro e por último com a bobina geradora e a bobina detectora, com a inserção do núcleo de ferro.
+
+A seguir, apresentamos um gráfico representativo de cada cenário. Para facilitar a visualização do evento de indução, os gráficos foram plotados no intervalo de tempo específico onde o pulso de tensão ocorre. A análise quantitativa subsequente focará na determinação do fluxo a partir da integral da curva V(t). O conjunto completo de dados brutos para todas as Y medições pode ser consultado no Apêndice.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{figuras/grafico_diferenca_potencial - 1.png}
+    \caption{Gráfico de tensão versus tempo com a bobina geradora e o imã.}
+    \label{fig:grafico1}
+\end{figure}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{figuras/grafico_diferenca_potencial - 2.png}
+    \caption{Gráfico de tensão versus tempo com a bobina geradora e o detector sem o núcleo de ferro.}
+    \label{fig:grafico2}
+\end{figure}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{figuras/grafico_diferenca_potencial - 3.png}
+    \caption{Gráfico de tensão versus tempo com a bobina geradora e o detector com o núcleo de ferro.}
+    \label{fig:grafico3}
+\end{figure}
+
+
 
 \section{Análise de Dados}
-[...]
+De posse dos dados experimentais, utilizamos a integração numérica com o método do trapézio para calcular o fluxo magnético $\Phi$ através da bobina detectora. A partir da equação (14) desenvolvida na seção de embasamento teórico, podemos expressar o fluxo magnético experimental como o resultado da integral da curva de tensão em função do tempo dividida pelo número de voltas $N$ da bobina detectora. 
+O resultado esperado é que o valor dessa integral seja constante entre as medições 
 \section{Conclusão}
 [...]
 
@@ -90,5 +114,9 @@ Schechner, S. J. (2015). The Art of Making Leyden Jars and Batteries according t
 
 
 \end{thebibliography}
+
+\section*{Apêndice}
+\paragraph{}
+\include{graficos}
 
 \end{document}
